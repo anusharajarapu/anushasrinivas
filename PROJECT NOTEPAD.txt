@@ -1,0 +1,191 @@
+VISUAL ARTS USING FLASK:
+------------------------------------------------------------
+BACKEND DATA WITH MY PROJECT:
+-------------------------------------------------------
+mysql> use arts;
+Database changed
+mysql> show tables;
++----------------+
+| Tables_in_arts |
++----------------+
+| additems       |
+| register       |
++----------------+
+2 rows in set (0.03 sec)
+
+mysql> desc register;
++----------+--------------+------+-----+---------+-------+
+| Field    | Type         | Null | Key | Default | Extra |
++----------+--------------+------+-----+---------+-------+
+| name     | varchar(20)  | NO   | PRI | NULL    |       |
+| email    | varchar(100) | YES  | UNI | NULL    |       |
+| password | varchar(10)  | YES  |     | NULL    |       |
+| gender   | varchar(20)  | YES  |     | NULL    |       |
++----------+--------------+------+-----+---------+-------+
+4 rows in set (0.06 sec)
+
+mysql> alter table register modify column password varchar(100);
+Query OK, 1 row affected (2.61 sec)
+Records: 1  Duplicates: 0  Warnings: 0
+
+mysql> select * from register;
++-------+-------------------------------------+----------+--------+
+| name  | email                               | password | gender |
++-------+-------------------------------------+----------+--------+
+| vijji | chithajallu.vijayalakshmi@gmail.com | new      | female |
++-------+-------------------------------------+----------+--------+
+1 row in set (0.00 sec)
+
+mysql> select * from register;
++-----------------+-------------------------------------+-------------+--------+
+| name            | email                               | password    | gender |
++-----------------+-------------------------------------+-------------+--------+
+| anusha rajarapu | anusharajarapu66@gmail.com          | anusurya104 | female |
+| vijji           | chithajallu.vijayalakshmi@gmail.com | new         | female |
++-----------------+-------------------------------------+-------------+--------+
+2 rows in set (0.00 sec)
+mysql> use arts;
+Database changed
+mysql> show tables;
++----------------+
+| Tables_in_arts |
++----------------+
+| additems       |
+| album_names    |
+| register       |
++----------------+
+3 rows in set (0.00 sec)
+
+mysql> select * from additems;
++--------+-----------------+---------------------------------------------------------------------------------------------------+
+| itemid | name            | description                                                                                       |
++--------+-----------------+---------------------------------------------------------------------------------------------------+
+| L4rR8e | anusha rajarapu | anusha files uploading projects in this app                                                       |
+| Q5fO2a | anusha rajarapu | selfees pics                                                                                      |
+| Y2nX9e | vijji           | new                                                                                               |
+| Y5sK1x | anusha rajarapu | the project is visual arts collection using flask and this is the main key feature of art gallery |
+| Y6cS8d | anusha rajarapu | this my first flie uploading on this app                                                          |
+| Y9wG4w | anusha rajarapu | "Friendship is a sheltering tree"                                                                 |
++--------+-----------------+---------------------------------------------------------------------------------------------------+
+6 rows in set (0.01 sec)
+
+mysql> select * from album_names;
+Empty set (0.00 sec)
+
+mysql> select * from register;
++-----------------+-------------------------------------+-------------+--------+
+| name            | email                               | password    | gender |
++-----------------+-------------------------------------+-------------+--------+
+| anusha rajarapu | anusharajarapu66@gmail.com          | anusurya104 | female |
+| vijji           | chithajallu.vijayalakshmi@gmail.com | new         | female |
++-----------------+-------------------------------------+-------------+--------+
+2 rows in set (0.00 sec)
+
+mysql> select * from additems;
++--------+-----------------+---------------------------------------------------------------------------------------------------+
+| itemid | name            | description                                                                                       |
++--------+-----------------+---------------------------------------------------------------------------------------------------+
+| L4rR8e | anusha rajarapu | anusha files uploading projects in this app                                                       |
+| Q5fO2a | anusha rajarapu | selfees pics                                                                                      |
+| Y2nX9e | vijji           | new                                                                                               |
+| Y5sK1x | anusha rajarapu | the project is visual arts collection using flask and this is the main key feature of art gallery |
+| Y6cS8d | anusha rajarapu | this my first flie uploading on this app                                                          |
+| Y9wG4w | anusha rajarapu | "Friendship is a sheltering tree"                                                                 |
++--------+-----------------+---------------------------------------------------------------------------------------------------+
+6 rows in set (0.00 sec)
+
+mysql> desc additems;
++-------------+---------------+------+-----+---------+-------+
+| Field       | Type          | Null | Key | Default | Extra |
++-------------+---------------+------+-----+---------+-------+
+| itemid      | varchar(9)    | NO   | PRI | NULL    |       |
+| name        | varchar(20)   | YES  | MUL | NULL    |       |
+| description | varchar(1000) | YES  |     | NULL    |       |
++-------------+---------------+------+-----+---------+-------+
+3 rows in set (0.04 sec)
+
+mysql> select *from album_names;
+Empty set (0.00 sec)
+
+mysql> desc album_names;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| name  | varchar(20) | YES  |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+1 row in set (0.00 sec)
+
+mysql> select *from register;
++-----------------+-------------------------------------+-------------+--------+
+| name            | email                               | password    | gender |
++-----------------+-------------------------------------+-------------+--------+
+| anusha rajarapu | anusharajarapu66@gmail.com          | anusurya104 | female |
+| vijji           | chithajallu.vijayalakshmi@gmail.com | new         | female |
++-----------------+-------------------------------------+-------------+--------+
+2 rows in set (0.00 sec)
+
+mysql> desc register;
++----------+--------------+------+-----+---------+-------+
+| Field    | Type         | Null | Key | Default | Extra |
++----------+--------------+------+-----+---------+-------+
+| name     | varchar(20)  | NO   | PRI | NULL    |       |
+| email    | varchar(100) | YES  | UNI | NULL    |       |
+| password | varchar(100) | YES  |     | NULL    |       |
+| gender   | varchar(20)  | YES  |     | NULL    |       |
++----------+--------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> show tables;
++----------------+
+| Tables_in_arts |
++----------------+
+| additems       |
+| album_names    |
+| register       |
++----------------+
+3 rows in set (0.00 sec)
+
+mysql> select *from album_names;
+Empty set (0.00 sec)
+
+mysql> desc album_names;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| name  | varchar(20) | YES  |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+1 row in set (0.00 sec)
+
+mysql> alter table album_names add  added_by varchar(200);
+Query OK, 0 rows affected (0.07 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc album_names;
++----------+--------------+------+-----+---------+-------+
+| Field    | Type         | Null | Key | Default | Extra |
++----------+--------------+------+-----+---------+-------+
+| name     | varchar(20)  | YES  |     | NULL    |       |
+| added_by | varchar(200) | YES  |     | NULL    |       |
++----------+--------------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> desc album_names;
++----------+--------------+------+-----+---------+-------+
+| Field    | Type         | Null | Key | Default | Extra |
++----------+--------------+------+-----+---------+-------+
+| name     | varchar(20)  | YES  |     | NULL    |       |
+| added_by | varchar(200) | YES  |     | NULL    |       |
++----------+--------------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> select * from album_names;
++-----------------+----------+
+| name            | added_by |
++-----------------+----------+
+| anusha rajarapu | by miiii |
+| prameela        | all      |
++-----------------+----------+
+2 rows in set (0.00 sec)
+
+mysql>
+

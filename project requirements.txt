@@ -1,0 +1,12 @@
+dictionaries:
+---------------------------
+security purpose uses = "its dangerous security"my security purpose
+
+exsisting system;
+---------------------------
+time ,speed,is to understand the code 
+
+proposed system;
+--------------------------
+already use chesina project ni mana requirements lo mana applications flask,jinga,mangodb lo modifications chestam
+
